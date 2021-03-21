@@ -1,0 +1,33 @@
+using System;
+
+namespace Third
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the first number: ");
+            int firstNum = int.Parse(Console.ReadLine());
+            Console.Write("Enter the second number: ");
+            int secondNum = int.Parse(Console.ReadLine());
+            
+            if (firstNum > secondNum)
+            {
+                int helper = firstNum;
+                firstNum = secondNum;
+                secondNum = helper;
+                Console.WriteLine("Свободно за интерпретация");
+            }else if (firstNum == secondNum)
+            {
+                int product = firstNum * secondNum;
+                Console.WriteLine("Свободно за интерпретация");
+            }else
+            {
+                int diff = secondNum - firstNum;
+                Console.WriteLine("Свободно за интерпретация");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
