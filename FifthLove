@@ -1,0 +1,47 @@
+using System;
+
+namespace Sixth
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the coordinates of the point: ");
+            Console.Write("x: ");
+            double xPoint = double.Parse(Console.ReadLine());
+            Console.Write("y: ");
+            double yPoint = double.Parse(Console.ReadLine());
+
+            if (xPoint == 0 && yPoint == 0)
+            {
+                Console.WriteLine("The point is in the center coordinate system");
+            }
+            else if (xPoint == 0)
+            {
+                Console.WriteLine("The point is on the abscissa");
+            }
+            else if (yPoint == 0)
+            {
+                Console.WriteLine("The point is on the ordinate");
+            }
+            else if (xPoint > 0 && yPoint > 0)
+            {
+                Console.WriteLine("The point is in first quadrant");
+            }
+            else if (xPoint < 0 && yPoint > 0)
+            {
+                Console.WriteLine("The point is in second quadrant");
+            }
+            else if (xPoint < 0 && yPoint < 0)
+            {
+                Console.WriteLine("The point is in third quadrant");
+            }
+            else if (xPoint > 0 && yPoint < 0)
+            {
+                Console.WriteLine("The point is in fourth quadrant");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
