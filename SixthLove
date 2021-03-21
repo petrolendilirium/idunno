@@ -1,0 +1,29 @@
+using System;
+
+namespace Seventh
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the first number: ");
+            int firstNum = int.Parse(Console.ReadLine());
+            Console.Write("Enter the second number: ");
+            int secondNum = int.Parse(Console.ReadLine());
+
+            int diff = firstNum % secondNum;
+
+            if (diff == 0)
+            {
+                Console.WriteLine("The first number ");
+            }else
+            {
+                Console.WriteLine("The first number doesn't ");
+                int nearest = (secondNum - diff) + firstNum;
+                Console.WriteLine("The nearest number that does is {0}", nearest);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
