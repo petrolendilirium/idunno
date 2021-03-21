@@ -1,0 +1,61 @@
+using System;
+
+namespace Second
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the first number: ");
+            double firstNum = double.Parse(Console.ReadLine());
+            Console.Write("Enter the second number: ");
+            double secondNum = double.Parse(Console.ReadLine());
+            Console.Write("Enter the third number: ");
+            double thirdNum = double.Parse(Console.ReadLine());
+
+            double high = 0;
+            double mid = 0;
+            double low = 0;
+
+            if (firstNum > secondNum && firstNum > thirdNum)
+            {
+                high = firstNum;
+                if (secondNum > thirdNum)
+                {
+                    mid = secondNum;
+                    low = thirdNum;
+                }else
+                {
+                    mid = thirdNum;
+                    low = secondNum;
+                }
+            }else if (firstNum > secondNum && firstNum < thirdNum)
+            {
+                high = thirdNum;
+                mid = firstNum;
+                low = secondNum;
+            }else if (firstNum < secondNum && firstNum > thirdNum)
+            {
+                high = secondNum;
+                mid = firstNum;
+                low = thirdNum;
+            }else if (firstNum < secondNum && firstNum < thirdNum)
+            {
+                low = firstNum;
+                if (secondNum > thirdNum)
+                {
+                    high = secondNum;
+                    mid = thirdNum;
+                }
+                else
+                {
+                    high = thirdNum;
+                    mid = secondNum;
+                }
+            }
+
+            Console.WriteLine("The numbers in descending order are: {0} {1} {2}", low, mid, high);
+            Console.ReadLine();
+        }
+    }
+}
