@@ -1,0 +1,39 @@
+using System;
+
+namespace Fifth
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        //За тая не питай как я направих. Взех решението от един сайт и го приложих и пренаписах за задачата иначе никакъв шанс да се сетя
+            Console.WriteLine("Enter the coordinates of the center of the circle: ");
+            Console.Write("x: ");
+            double circleX = double.Parse(Console.ReadLine());
+            Console.Write("y: ");
+            double circleY = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter the length of the radius: ");
+            double radius = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the coordinates of the point: ");
+            Console.Write("x: ");
+            double pointX = double.Parse(Console.ReadLine());
+            Console.Write("y: ");
+            double pointY = double.Parse(Console.ReadLine());
+
+            if ((pointX - circleX)*(pointX - circleX) + (pointY - circleY)*(pointY - circleY) < radius * radius)
+            {
+                Console.WriteLine("The point is inside the circle");
+            }else if ((pointX - circleX) * (pointX - circleX) + (pointY - circleY) * (pointY - circleY) > radius * radius)
+            {
+                Console.WriteLine("The point is outside the circle");
+            }else
+            {
+                Console.WriteLine("The point is on the circle");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
